@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <LinearLayout
+        android:background="@color/background_dashboard"
+        android:layout_weight=".4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_weight=".5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/start_payment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:gravity="center"
+                android:layout_margin="25dp"
+                android:background="@drawable/linerlayout_background"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/start_payment"
+                    android:layout_weight=".6"/>
+                <TextView
+                    android:layout_weight=".4"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="START PAYMENT"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight=".5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:id="@+id/send_oinvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/linerlayout_background"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/send_invoice"
+                        android:layout_weight=".6"/>
+                    <TextView
+                        android:layout_weight=".4"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="SEND INVOICET"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight=".2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_weight=".93"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".2"
+                android:text="Last 5 transactions"
+                android:textColor="@color/background_dashboard"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/poppins_bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:text="View all"
+                app:fontFamily="@font/poppins" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id = "@+id/recycler_view"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:scrollbars = "horizontal" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight=".3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+</LinearLayout>

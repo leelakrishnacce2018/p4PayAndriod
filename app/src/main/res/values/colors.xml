@@ -26,4 +26,7 @@
     <color name="clr_white_text">#FFFFFF</color>
     <color name="clr_grey_text">#D3D3D3</color>
     <color name="clr_grey_text_transparent">#80D3D3D3</color>
+
+
+    <color name="background_dashboard">#604293</color>
 </resources>

@@ -48,7 +48,9 @@
                     android:layout_weight=".4"
                     android:layout_width="match_parent"
                     android:paddingLeft="10dp"
-
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true"
                     android:background="@drawable/edittext_field"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -71,6 +73,8 @@
                     android:layout_width="match_parent"
                     android:background="@drawable/edittext_field"
                     android:inputType="textPassword"
+                    android:ems="10"
+                    android:selectAllOnFocus="true"
                     android:paddingLeft="10dp"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -78,10 +82,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="9dp"
             android:layout_weight=".3"
             android:orientation="vertical"
             android:weightSum="1">
+            <TextView
+                android:id="@+id/forgetp_pass"
+                android:layout_weight=".4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Forget password"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal" />
             <Button
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
@@ -89,10 +102,10 @@
                 android:background="@drawable/login_button"
                 android:text="Log in"
                 android:textSize="23dp"
-                android:layout_weight=".6"
+                android:layout_weight=".3"
                 android:textColor="#fff"/>
             <LinearLayout
-                android:layout_weight=".6"
+                android:layout_weight=".3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

@@ -1,13 +1,17 @@
 package com.example.p4paysecurepayment;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.JsonReader;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -95,7 +99,7 @@ public class Login_page extends AppCompatActivity {
                                             if (jsonObject.get("success").toString().equals("true")){
                                                 editor.putString("FirstTime","launch");
                                                 editor.commit();
-                                                startActivity(new Intent(getApplicationContext(),Dashboard.class));
+                                                startActivity(new Intent(getApplicationContext(),dashboard.class));
                                                 //Toast.makeText(getApplicationContext(),jsonObject.get("accessToken").toString(),Toast.LENGTH_SHORT).show();
                                             }else {
                                                 Toast.makeText(getApplicationContext(),jsonObject.get("message").toString(),Toast.LENGTH_SHORT).show();
@@ -111,7 +115,10 @@ public class Login_page extends AppCompatActivity {
                                 }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                                Toast.makeText(getApplicationContext(),"Server Communication  Problem",Toast.LENGTH_SHORT).show();
+                                Log.i("error ssss",error.toString());
+                                //Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         });
                         requestQueue.add(jsonObjectRequest);
@@ -135,11 +142,15 @@ public class Login_page extends AppCompatActivity {
         dialog.show();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed() {
        // super.onBackPressed();
         /*android.os.Process.killProcess(android.os.Process.myPid());
         Login_page.this.finish();
         System.exit(0);*/
+                        finishAffinity();
+                        System.exit(0);
+
     }
 }

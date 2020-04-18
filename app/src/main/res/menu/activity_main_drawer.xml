@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_item_home"
+            android:title="Home" />
+        <item android:id="@+id/nav_item_kyc"
+            android:title="KYC" />
+        <item android:id="@+id/nav_item_account1"
+            android:title="Account &amp; Cards" />
+        <item android:id="@+id/nav_item_aboutus"
+            android:title="About us" />
+        <item android:id="@+id/nav_item_update_account"
+            android:title="Refer to Upgrade Account" />
+        <item android:id="@+id/nav_item_coupons"
+            android:title="Coupons" />
+        <item android:id="@+id/nav_item_upaccount"
+            android:title="Upgrade Account" />
+        <item android:id="@+id/nav_item_logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
