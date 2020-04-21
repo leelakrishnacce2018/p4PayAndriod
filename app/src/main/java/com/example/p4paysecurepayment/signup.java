@@ -39,7 +39,9 @@ public class signup extends AppCompatActivity {
     EditText username,email,mobile,passw,confrim_password;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     RequestQueue requestQueue;
-    String url ="https://mysterious-eyrie-12968.herokuapp.com/api/auth/signup";
+    //String url ="https://mysterious-eyrie-12968.herokuapp.com/api/auth/signup";
+    String url =Connection.URL+"auth/signup";
+
     AlertDialog.Builder builder;
     AlertDialog dialog;
     TextView msg,msg2;

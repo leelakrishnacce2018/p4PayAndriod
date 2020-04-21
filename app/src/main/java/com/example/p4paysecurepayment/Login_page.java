@@ -45,7 +45,8 @@ public class Login_page extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     String regexStr = "^[0-9]*$";
     Button close;
-    String url ="https://mysterious-eyrie-12968.herokuapp.com/api/auth/signin";
+    //String url ="https://mysterious-eyrie-12968.herokuapp.com/api/auth/signin";
+    String url =Connection.URL+"auth/signin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +99,9 @@ public class Login_page extends AppCompatActivity {
                                             JSONObject jsonObject = new JSONObject(response.toString());
                                             if (jsonObject.get("success").toString().equals("true")){
                                                 editor.putString("FirstTime","launch");
+                                                editor.putString("accessToken",jsonObject.get("accessToken").toString());
+                                                editor.putString("tokenType",jsonObject.get("tokenType").toString());
+
                                                 editor.commit();
                                                 startActivity(new Intent(getApplicationContext(),dashboard.class));
                                                 //Toast.makeText(getApplicationContext(),jsonObject.get("accessToken").toString(),Toast.LENGTH_SHORT).show();

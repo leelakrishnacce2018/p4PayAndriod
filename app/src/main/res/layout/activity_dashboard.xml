@@ -42,25 +42,57 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
                                 <ImageView
+                                    android:id="@+id/user_profile_image"
                                     android:src="@mipmap/ic_lanchers"
                                     android:layout_width="match_parent"
+                                    android:layout_margin="8dp"
                                     android:layout_height="match_parent"/>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_weight=".2"
-                                android:orientation="vertical"
+                                android:weightSum="1"
+                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
-                                <TextView
-                                    android:layout_weight=".5"
-                                    android:gravity="left"
-                                    android:text="Hi, John Wick"
+                                <LinearLayout
+                                    android:layout_weight=".3"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
-                                <TextView
-                                    android:layout_weight=".5"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_weight=".5"
+                                        android:gravity="left"
+                                        android:text="Hi, John Wick"
+                                        android:textSize="18sp"
+                                        android:layout_marginLeft="10dp"
+                                        android:textColor="#ffffff"
+                                        android:textStyle="bold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <TextView
+                                        android:layout_weight=".5"
+                                        android:gravity="left"
+                                        android:text="Verify KYC"
+                                        android:textSize="13sp"
+                                        android:textColor="#fff"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight=".7"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:src="@drawable/ic_warning_black_24dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_margin="15dp"
+                                        android:layout_gravity="left|center"
+                                        android:layout_height="match_parent"
+                                        />
+
+                                </LinearLayout>
+
                             </LinearLayout>
 
                         </LinearLayout>

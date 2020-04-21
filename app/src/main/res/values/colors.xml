@@ -21,6 +21,22 @@
         <item>#E040FB</item>
     </array>
 
+    <array name="dot_on_page_active_recycleview">
+        <item>#2196F3</item>
+        <item>#2196F3</item>
+        <item>#2196F3</item>
+        <item>#2196F3</item>
+        <item>#2196F3</item>
+    </array>
+
+    <array name="dot_on_page_not_active_recycleview">
+        <item>#C3C1C1</item>
+        <item>#C3C1C1</item>
+        <item>#C3C1C1</item>
+        <item>#C3C1C1</item>
+        <item>#C3C1C1</item>
+    </array>
+
     <color name="clr_otp_bg">#535288</color>
     <color name="clr_otp_btn_yellow">#F8CD06</color>
     <color name="clr_white_text">#FFFFFF</color>
